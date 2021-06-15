@@ -40,8 +40,8 @@ while(firstLoop < numberOfEq-1):
         InnerLoop = 0
         
         # VARIABLES FOR ROW MULTIPLICATION OPERATION
-        c = linearEquations[firstLoop][InnerLoop]
-        d = linearEquations[middleLoop][InnerLoop]
+        c = linearEquations[firstLoop][firstLoop]
+        d = linearEquations[middleLoop][firstLoop]
 
         while (InnerLoop < len(linearEquations[0])):
             print('---------Inner--------')
