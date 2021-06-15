@@ -1,12 +1,12 @@
-linearEquations = [              # 2 EQUATIONS WITH 2 CO EFFICIENTS
-    [1.00,1.00,2.0],
-    [-1.0,2.0,1.0],
-    ]
-# linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
-#     [10.00,1.00,1.0,12.0],
-#     [1.0,10.0,-1.0,10.0],
-#     [1.0,-2.0,10.0,9.0]
+# linearEquations = [              # 2 EQUATIONS WITH 2 CO EFFICIENTS
+#     [1.00,1.00,2.0],
+#     [-1.0,2.0,1.0],
 #     ]
+linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
+    [10.00,1.00,1.0,12.0],
+    [1.0,10.0,-1.0,10.0],
+    [1.0,-2.0,10.0,9.0]
+    ]
 # linearEquations = [              # 4 EQUATIONS WITH 4 CO EFFICIENTS
 #     [10.00,1.00,1.0,12.0,1],
 #     [1.0,10.0,-1.0,10.0,1],
