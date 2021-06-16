@@ -7,12 +7,12 @@ for i in range(a):
     for j in range(a+1):
         var = chr(123-a+j)
         if(j < a):
-            b = int(input('Enter coefficient of '+var+': '))
+            b = float(input('Enter coefficient of '+var+': '))
         else:
-            b = int(input('Enter value: '))
+            b = float(input('Enter value: '))
         equation.append(b)
     linearEquations.append(equation)
-# print(linearEquations)
+print(linearEquations)
 # ------------------------------------------------------------------------------------------------------------------
 
 
@@ -99,4 +99,4 @@ while(index > firstLoop):
     index = index - 1
 
 for i in range(len(linearEquations)):
-    print(chr(ord('z') + 1 - numberOfEq+i)+'='+str(linearEquations[i][i])+'\n')
+    print(chr(ord('z') + 1 - numberOfEq+i)+'='+str(linearEquations[i][numberOfCoef-1])+'\n')

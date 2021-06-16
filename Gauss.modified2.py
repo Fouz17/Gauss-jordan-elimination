@@ -1,27 +1,31 @@
-a = int(input('number of equations: '))
+# a = int(input('number of equations: '))
 
-linearEquations = []
+# linearEquations = []
 
-for i in range(a):
-    equation = []
-    for j in range(a+1):
-        var = chr(123-a+j)
-        if(j < a):
-            b = int(input('Enter coefficient of '+var+': '))
-        else:
-            b = int(input('Enter value: '))
-        equation.append(b)
-    linearEquations.append(equation)
+# for i in range(a):
+#     equation = []
+#     for j in range(a+1):
+#         var = chr(123-a+j)
+#         if(j < a):
+#             b = float(input('Enter coefficient of '+var+': '))
+#         else:
+#             b = float(input('Enter value: '))
+#         equation.append(b)
+#     linearEquations.append(equation)
 # print(linearEquations)
 # ------------------------------------------------------------------------------------------------------------------
-
+linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
+    [1.0, 1.0, 1.0, 3.0],        # x = 1, y = 1, z = 1
+    [0.00, 4.00, -1.0, 3.0],
+    [2.0, -2.0, 2.0, 2.0]
+]
 
 numberOfEq = len(linearEquations)  # CHECKING NUMBERS OF EQUATION
 numberOfCoef = len(linearEquations[0])
 firstLoop = 0
 while(firstLoop < numberOfEq-1):
     # IF 1ST ELEMENT OF 1ST EQUATION IS NOT EQUAL TO 1 THEN CONVERTING IT.....
-    if(linearEquations[firstLoop][firstLoop] > 1 and linearEquations[firstLoop][firstLoop] < -1):
+    if(linearEquations[firstLoop][firstLoop] > 1 or linearEquations[firstLoop][firstLoop] < -1):
         x = linearEquations[firstLoop][firstLoop]
         # LOOP FOR DIVIDING EVERY ELEMENT OF 1ST LIST BY 1ST ELEMENT OF THAT LIST
         for i in range(len(linearEquations[firstLoop])):
@@ -98,5 +102,8 @@ while(index > firstLoop):
         middleLoop = middleLoop - 1
     index = index - 1
 
+print(linearEquations)
+
 for i in range(len(linearEquations)):
-    print(chr(ord('z') + 1 - numberOfEq+i)+'='+str(linearEquations[i][i])+'\n')
+    print(chr(ord('z') + 1 - numberOfEq+i)+'=' +
+          str(linearEquations[i][numberOfCoef-1])+'\n')

@@ -1,7 +1,12 @@
+# linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
+#     [1.0, 3.0, 1.0, 10.0],          # x = 1, y = 2, z = 3
+#     [1.00, -2.00, -1.0, -6.0],
+#     [2.0, 1.0, 2.0, 10.0]
+# ]
 linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
-    [1.0, 3.0, 1.0, 10.0],          # x = 1, y = 2, z = 3
-    [1.00, -2.00, -1.0, -6.0],
-    [2.0, 1.0, 2.0, 10.0]
+    [1.0, 1.0, 1.0, 3.0],        # x = 1, y = 1, z = 1
+    [3.00, 1.00, -1.0, 3.0],
+    [2.0, -2.0, 2.0, 2.0]
 ]
 # linearEquations = [              # 2 EQUATIONS WITH 2 CO EFFICIENTS
 #     [1.00,1.00,2.0],             # x = 1, y = 1
@@ -122,3 +127,5 @@ print(linearEquations)
 
 # for i in range(len(linearEquations)):
 #     print('value is: '+str(linearEquations[i][4]/linearEquations[i][i]))
+for i in range(len(linearEquations)):
+    print(chr(ord('z') + 1 - numberOfEq+i)+'='+str(linearEquations[i][numberOfCoef-1])+'\n')
