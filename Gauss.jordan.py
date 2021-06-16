@@ -1,24 +1,24 @@
-# linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
-#     [1.0,3.0,1.0,10.0],
-#     [1.00,-2.00,-1.0,-6.0],
-#     [2.0,1.0,2.0,10.0]
-#     ]
+linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
+    [1.0,3.0,1.0,10.0],          # x = 1, y = 2, z = 3
+    [1.00,-2.00,-1.0,-6.0],
+    [2.0,1.0,2.0,10.0]
+    ]
 # linearEquations = [              # 2 EQUATIONS WITH 2 CO EFFICIENTS
-#     [1.00,1.00,2.0],
-#     [-1.0,2.0,1.0],
+#     [1.00,1.00,2.0],             # x = 1, y = 1
+#     [-1.0,2.0,1.0],     
 #     ]
 # linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
-#     [1.0,10.0,-1.0,10.0],
+#     [1.0,10.0,-1.0,10.0],        # x = 1, y = 1, z = 1
 #     [10.00,1.00,1.0,12.0],
 #     [1.0,-2.0,10.0,9.0]
 #     ]
 
-linearEquations = [              # 4 EQUATIONS WITH 4 CO EFFICIENTS
-    [1.00,1.00,1.0,1.0,4.0],
-    [1.0,2.0,-1.0,1.0,3.0],
-    [3.0,-2.0,5.0,4.0,10.0],
-    [1.0,2.0,3.0,4.0,10.0]
-    ]
+# linearEquations = [              # 4 EQUATIONS WITH 4 CO EFFICIENTS
+#     [1.00,1.00,1.0,1.0,4.0],     # w = 1, x = 1, y = 1, z = 1
+#     [1.0,2.0,-1.0,1.0,3.0],
+#     [3.0,-2.0,5.0,4.0,10.0],
+#     [1.0,2.0,3.0,4.0,10.0]
+#     ]
 #------------------------------------------------------------------------------------------------------------------
 
 if(linearEquations[0][0] != 1): #IF 1ST ELEMENT OF 1ST EQUATION IS NOT EQUAL TO 1 THEN CONVERTING IT.....
@@ -59,6 +59,7 @@ while(firstLoop < numberOfEq-1):
         middleLoop = middleLoop + 1
     firstLoop = firstLoop + 1
 
+# print(linearEquations)
 #--------------------------------------------------------------------------------------------------------------------------------------
 if(linearEquations[numberOfEq-1][numberOfCoef-2] != 1): #IF 1ST ELEMENT OF 1ST EQUATION IS NOT EQUAL TO 1 THEN CONVERTING IT.....
     x = linearEquations[numberOfEq-1][numberOfCoef-2]
@@ -100,5 +101,17 @@ while(index > firstLoop):
             numberOfCoef = numberOfCoef - 1
         middleLoop = middleLoop - 1
     index = index - 1
-for i in range(len(linearEquations)):
-    print(linearEquations[i])
+
+# print(linearEquations)
+
+for i in range(1,len(linearEquations)-1,1):
+    var = linearEquations[i][i]
+    if(var != 1):
+        value = linearEquations[i][len(linearEquations[0])-1]
+        linearEquations[i][i] = var/var
+        linearEquations[i][len(linearEquations[0])-1] = value/var
+
+print(linearEquations)
+
+# for i in range(len(linearEquations)):
+#     print('value is: '+str(linearEquations[i][4]/linearEquations[i][i]))
