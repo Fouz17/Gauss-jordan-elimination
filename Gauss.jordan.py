@@ -1,29 +1,16 @@
 # linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
-#     [1.0, 3.0, 1.0, 10.0],          # x = 1, y = 2, z = 3
-#     [1.00, -2.00, -1.0, -6.0],
-#     [2.0, 1.0, 2.0, 10.0]
-# ]
-linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
-    [1.0, 1.0, 1.0, 3.0],        # x = 1, y = 1, z = 1
-    [3.00, 1.00, -1.0, 3.0],
-    [2.0, -2.0, 2.0, 2.0]
-]
-# linearEquations = [              # 2 EQUATIONS WITH 2 CO EFFICIENTS
-#     [1.00,1.00,2.0],             # x = 1, y = 1
-#     [-1.0,2.0,1.0],
-#     ]
+#     [1.0, 3.0, 1.0, 10.0], [1.00, -2.00, -1.0, -6.0], [2.0, 1.0, 2.0, 10.0]]          # x = 1, y = 2, z = 3
 # linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
-#     [1.0,10.0,-1.0,10.0],        # x = 1, y = 1, z = 1
-#     [10.00,1.00,1.0,12.0],
-#     [1.0,-2.0,10.0,9.0]
-#     ]
-
+#     [1.0, 1.0, 1.0, 3.0], [3.00, 1.00, -1.0, 3.0], [2.0, -2.0, 2.0, 2.0]]      # x = 1, y = 1, z = 1
+linearEquations = [
+    [1.00, 1.00, 1.00, 0.00], [4.00, 1.00, 5.00, 3.00], [6.00, 2.00, 3.00, 4.00]]     # x = 1, y = 1, z = 0
+# linearEquations = [              # 2 EQUATIONS WITH 2 CO EFFICIENTS
+#     [1.00, 1.00, 2.0], [-1.0, 2.0, 1.0]]             # x = 1, y = 1
+# linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
+#     [1.0, 10.0, -1.0, 10.0], [10.00, 1.00, 1.0, 12.0], [1.0, -2.0, 10.0, 9.0]]       # x = 1, y = 1, z = 1
 # linearEquations = [              # 4 EQUATIONS WITH 4 CO EFFICIENTS
-#     [1.00,1.00,1.0,1.0,4.0],     # w = 1, x = 1, y = 1, z = 1
-#     [1.0,2.0,-1.0,1.0,3.0],
-#     [3.0,-2.0,5.0,4.0,10.0],
-#     [1.0,2.0,3.0,4.0,10.0]
-#     ]
+#     [1.00, 1.00, 1.0, 1.0, 4.0], [1.0, 2.0, -1.0, 1.0, 3.0], [3.0, -2.0, 5.0, 4.0, 10.0], [1.0, 2.0, 3.0, 4.0, 10.0]]     # w = 1, x = 1, y = 1, z = 1
+
 # ------------------------------------------------------------------------------------------------------------------
 
 # IF 1ST ELEMENT OF 1ST EQUATION IS NOT EQUAL TO 1 THEN CONVERTING IT.....
@@ -128,4 +115,5 @@ print(linearEquations)
 # for i in range(len(linearEquations)):
 #     print('value is: '+str(linearEquations[i][4]/linearEquations[i][i]))
 for i in range(len(linearEquations)):
-    print(chr(ord('z') + 1 - numberOfEq+i)+'='+str(linearEquations[i][numberOfCoef-1])+'\n')
+    print(chr(ord('z') + 1 - numberOfEq+i)+'=' +
+          str(linearEquations[i][numberOfCoef-1])+'\n')

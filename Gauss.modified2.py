@@ -38,7 +38,7 @@ while(firstLoop < numberOfEq-1):
         while (InnerLoop < len(linearEquations[0])):
 
             a = linearEquations[middleLoop][InnerLoop]  # THIS IS EQUAL TO D
-            b = linearEquations[firstLoop][InnerLoop]   # THIS IS EQUAL TO C
+            b = linearEquations[firstLoop][InnerLoop]
 
             linearEquations[middleLoop][InnerLoop] = a-(d*b)
 
@@ -57,13 +57,11 @@ if(linearEquations[numberOfEq-1][numberOfCoef-2] != 1):
 
 
 index = numberOfEq - 1
-firstLoop = 0
-while(index > firstLoop):
+while(index > 0):
 
-    middleLoopLimit = 0
     middleLoop = index - 1  # CHECKING NUMBERSS OF EQUATION
 
-    while(middleLoop >= middleLoopLimit):
+    while(middleLoop >= 0):
 
         InnerLoop = 0
         numberOfCoef = len(linearEquations[0])
@@ -71,11 +69,10 @@ while(index > firstLoop):
         # VARIABLES FOR ROW MULTIPLICATION OPERATION
         d = linearEquations[middleLoop][index]
 
-        while (numberOfCoef-1 >= InnerLoop):
+        while (numberOfCoef-1 >= 0):
 
             # THIS IS EQUAL TO D IN FIRST LOOP
             a = linearEquations[middleLoop][numberOfCoef - 1]
-            # THIS IS EQUAL TO C IN FIRST LOOP
             b = linearEquations[index][numberOfCoef - 1]
 
             result = a-(d*b)
@@ -89,5 +86,9 @@ while(index > firstLoop):
 # print(linearEquations)
 
 for i in range(len(linearEquations)):
+    if(linearEquations[i][numberOfCoef-1] == 0):
+        y = (abs(linearEquations[i][numberOfCoef-1]))
+    else:
+        y = linearEquations[i][numberOfCoef-1]
     print('\n'+chr(ord('z') + 1 - numberOfEq+i)+'=' +
-          str(linearEquations[i][numberOfCoef-1])+'\n')
+          str(y)+'\n')
