@@ -1,24 +1,18 @@
-# a = int(input('number of equations: '))
+a = int(input('number of equations: '))
 
-# linearEquations = []
+linearEquations = []
 
-# for i in range(a):
-#     equation = []
-#     for j in range(a+1):
-#         var = chr(123-a+j)
-#         if(j < a):
-#             b = float(input('Enter coefficient of '+var+': '))
-#         else:
-#             b = float(input('Enter value: '))
-#         equation.append(b)
-#     linearEquations.append(equation)
-# print(linearEquations)
+for i in range(a):
+    equation = []
+    for j in range(a+1):
+        var = chr(123-a+j)
+        if(j < a):
+            b = float(input('Enter coefficient of '+var+': '))
+        else:
+            b = float(input('Enter constant value: '))
+        equation.append(b)
+    linearEquations.append(equation)
 # ------------------------------------------------------------------------------------------------------------------
-linearEquations = [              # 3 EQUATIONS WITH 3 CO EFFICIENTS
-    [1.0, 1.0, 1.0, 3.0],        # x = 1, y = 1, z = 1
-    [0.00, 4.00, -1.0, 3.0],
-    [2.0, -2.0, 2.0, 2.0]
-]
 
 numberOfEq = len(linearEquations)  # CHECKING NUMBERS OF EQUATION
 numberOfCoef = len(linearEquations[0])
@@ -92,8 +86,8 @@ while(index > firstLoop):
         middleLoop = middleLoop - 1
     index = index - 1
 
-print(linearEquations)
+# print(linearEquations)
 
 for i in range(len(linearEquations)):
-    print(chr(ord('z') + 1 - numberOfEq+i)+'=' +
+    print('\n'+chr(ord('z') + 1 - numberOfEq+i)+'=' +
           str(linearEquations[i][numberOfCoef-1])+'\n')
