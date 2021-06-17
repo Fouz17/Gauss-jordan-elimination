@@ -9,12 +9,11 @@ for i in range(a):
         if(j < a):
             b = float(input('Enter coefficient of '+var+': '))
         else:
-            b = float(input('Enter value: '))
+            b = float(input('Enter constant value: '))
         equation.append(b)
     linearEquations.append(equation)
 print(linearEquations)
 # ------------------------------------------------------------------------------------------------------------------
-
 
 numberOfEq = len(linearEquations)  # CHECKING NUMBERS OF EQUATION
 numberOfCoef = len(linearEquations[0])
